@@ -13,10 +13,8 @@
 			},
       "client_id": "string"
 		},
-    "authorize": "/authorize",
     "authorize": {
       "url": "/authorize",
-      "method": "post",
       "query": {
         "client_id": "{client_id}",
         "response_type": "token",
@@ -26,7 +24,6 @@
       }
     },
     "access_token": "/token",
-    "request": "http://snowflake.dev",
     "refresh": "/token",
     "revoke": {
       "url": "/revoke",
