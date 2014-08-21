@@ -1,0 +1,47 @@
+{
+  "name": "Snowflake",
+  "desc": "Snowflake is the thing you use to log into ICIS",
+  "url": "http://snowflake.dev/oauth",
+	"oauth2": {
+		"parameters": {
+			"scope": {
+				"values": {
+					"user": "default staff",
+					"person": "patient"
+
+				}
+			},
+      "client_id": "string"
+		},
+    "authorize": "/authorize",
+    "authorize": {
+      "url": "/authorize",
+      "method": "post",
+      "query": {
+        "client_id": "{client_id}",
+        "response_type": "token",
+        "scope": "user",
+        "state": "{{state}}",
+        "redirect_uri": "{{callback}}"
+      }
+    },
+    "access_token": "/token",
+    "request": "http://snowflake.dev",
+    "refresh": "/token",
+    "revoke": {
+      "url": "/revoke",
+      "method": "post",
+      "query": {
+        "client_id": "{client_id}",
+        "client_secret": "{client_secret}",
+        "token": "{{token}}"
+      }
+    }
+  },
+  "href": {
+    "keys": "http://www.iorahealth.com",
+    "docs": "http://www.iorahealth.com",
+    "apps": "http://www.iorahealth.com",
+    "provider": "http://snowflake.dev"
+  }
+}
